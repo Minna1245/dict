@@ -38,7 +38,8 @@ while True: ## REPL - Read Execute Program Loop
     cmd = input("Command: ")
     if cmd == "list":
         print("The dictionary:")
-        print(read_dict(conn))
+        for i, wd, trans in read_dict(conn):
+            print(f"{i}: {wd} - {trans}")
     elif cmd == "add":
         word = input("  Word: ")
         translation = input("  Translation: ")
