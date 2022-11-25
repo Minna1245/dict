@@ -1,10 +1,12 @@
 import psycopg2
 conn = psycopg2.connect(
    host="localhost",
-   database="database",
-   user="user",
-   password="abc123"
+   database="dict",
+   user="postgres",
+   password="Sqlkone"
 )
+
+print("Available commands: LIST, ADD, DELETE, QUIT")
 
 def read_dict(C):
     cur = C.cursor()
