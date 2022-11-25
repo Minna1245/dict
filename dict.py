@@ -36,7 +36,7 @@ def save_dict(conn):
 
 def main():
     while True: ## REPL - Read Execute Program Loop
-    cmd = input("Command: ")
+    cmd = input("Give Command: ")
     if cmd == "list":
         print("The dictionary:")
         for i, wd, trans in read_dict(conn):
