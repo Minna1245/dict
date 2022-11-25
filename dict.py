@@ -37,14 +37,17 @@ def save_dict(C):
 while True: ## REPL - Read Execute Program Loop
     cmd = input("Command: ")
     if cmd == "list":
+        print("The dictionary:")
         print(read_dict(conn))
     elif cmd == "add":
-        name = input("  Word: ")
-        phone = input("  Translation: ")
-        add_word(conn, name, phone)
+        word = input("  Word: ")
+        translation = input("  Translation: ")
+        add_word(conn, word, translation)
+        print(f"added {word}")
     elif cmd == "delete":
         ID = input("  ID: ")
         delete_word(conn, ID)
+        print(f"deleted {id}")
     elif cmd == "quit":
         save_dict(conn)
         exit()
