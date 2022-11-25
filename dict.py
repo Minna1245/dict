@@ -34,7 +34,8 @@ def save_dict(conn):
     cur.execute("COMMIT;")
     cur.close()
 
-while True: ## REPL - Read Execute Program Loop
+def main():
+    while True: ## REPL - Read Execute Program Loop
     cmd = input("Command: ")
     if cmd == "list":
         print("The dictionary:")
@@ -51,3 +52,9 @@ while True: ## REPL - Read Execute Program Loop
     elif cmd == "quit":
         save_dict(conn)
         exit()
+
+main()
+
+
+
+
